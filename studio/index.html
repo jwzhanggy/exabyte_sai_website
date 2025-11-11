@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Instant redirect via meta refresh (fallback) -->
+  <meta http-equiv="refresh" content="0; url=https://exabyte.studio/">
+
+  <!-- SEO: Tell search engines this is a permanent redirect -->
+  <link rel="canonical" href="https://exabyte.studio/">
+
+  <title>Redirecting to Exabyte Studio...</title>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      background: linear-gradient(135deg, #4d0099 0%, #ffb300 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      color: white;
+    }
+    .container {
+      text-align: center;
+    }
+    .spinner {
+      border: 4px solid rgba(255, 255, 255, 0.3);
+      border-top: 4px solid white;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      animation: spin 1s linear infinite;
+      margin: 0 auto 20px;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    h1 {
+      font-size: 1.5rem;
+      margin: 0 0 10px;
+    }
+    p {
+      font-size: 1rem;
+      opacity: 0.9;
+    }
+    a {
+      color: white;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="spinner"></div>
+    <h1>Redirecting to Exabyte Studio...</h1>
+    <p>If you are not redirected automatically, <a href="https://exabyte.studio/">click here</a>.</p>
+  </div>
+
+  <script>
+    // JavaScript redirect (primary method)
+    window.location.replace('https://exabyte.studio/');
+  </script>
+</body>
+</html>

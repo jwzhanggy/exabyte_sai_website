@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Spatial AI API - Turn images and videos into photorealistic 3D reconstructions. Developer-first platform with RESTful APIs and SDKs.">
+  <title>Spatial AI API - Exabyte Spatial AI</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <div class="nav-content">
+        <a href="index.html" class="logo">
+          <img src="images/logo.png" alt="Exabyte Spatial AI Logo" class="logo-img">
+          <span class="logo-text">Exabyte Spatial AI</span>
+        </a>
+
+        <div class="nav-toggle" id="navToggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="platform.html" class="nav-link">Platform</a></li>
+          <li><a href="products.html" class="nav-link">Products</a></li>
+          <li><a href="developers.html" class="nav-link">Developers</a></li>
+          <li><a href="company.html" class="nav-link">Company</a></li>
+          <li><a href="careers.html" class="nav-link">Careers</a></li>
+          <li><a href="https://exabyte.studio" class="nav-link nav-link-highlight" target="_blank">Exabyte Studio</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" style="padding: 80px 0 60px 0; background: linear-gradient(135deg, rgba(77, 0, 153, 0.1), rgba(255, 179, 0, 0.05)); position: relative;">
+    <div class="hero-content" style="position: relative; bottom: auto; transform: none; left: auto; margin: 0 auto;">
+      <h1 class="hero-title">
+        <span class="gradient-text">Spatial AI API</span>
+      </h1>
+      <p class="hero-subtitle">
+        The foundational infrastructure for spatial intelligence.<br>
+        Turn images and videos into photorealistic 3D reconstructions with a single API call.
+      </p>
+      <div class="hero-buttons">
+        <a href="developers.html" class="btn btn-primary">Get API Key</a>
+        <a href="#pricing" class="btn btn-secondary">View Pricing</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- API Features -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header text-center">
+        <h2>What Can You Build?</h2>
+        <p class="section-subtitle">
+          A complete API suite for spatial intelligence development
+        </p>
+      </div>
+
+      <div class="grid grid-3">
+        <div class="card">
+          <div class="card-icon gradient-text">📷</div>
+          <h3 class="card-title">3D Reconstruction</h3>
+          <p class="card-text">
+            Convert images or videos into photorealistic 3D models.
+            Powered by gaussian splatting and neural rendering.
+          </p>
+          <div class="code-container">
+            <pre><code>POST /api/v1/reconstruct
+{
+  "media_url": "image.jpg",
+  "quality": "high"
+}</code></pre>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-icon gradient-text"><i class="fas fa-wand-magic-sparkles"></i></div>
+          <h3 class="card-title">Generative 3D</h3>
+          <p class="card-text">
+            Generate navigable 3D environments from text prompts.
+            Create full scenes, not just isolated objects.
+          </p>
+          <div class="code-container">
+            <pre><code>POST /api/v1/generate
+{
+  "prompt": "modern office",
+  "format": "gaussian_splat"
+}</code></pre>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-icon gradient-text"><i class="fas fa-edit"></i></div>
+          <h3 class="card-title">Scene Editing</h3>
+          <p class="card-text">
+            Modify 3D scenes with AI-powered editing tools.
+            Change lighting, add objects, remove elements.
+          </p>
+          <div class="code-container">
+            <pre><code>POST /api/v1/edit
+{
+  "scene_id": "abc123",
+  "operation": "add_object"
+}</code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technical Features -->
+  <section class="section section-dark">
+    <div class="container">
+      <div class="section-header text-center">
+        <h2>Built for Developers</h2>
+      </div>
+
+      <div class="feature-grid">
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-rocket"></i></div>
+          <h3 class="feature-title">Fast Processing</h3>
+          <p class="feature-text">
+            Real-time reconstruction with gaussian splatting.<br>
+            Process images in seconds, videos in minutes.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-plug"></i></div>
+          <h3 class="feature-title">RESTful API</h3>
+          <p class="feature-text">
+            Standard HTTP endpoints with JSON responses.<br>
+            Works with any programming language.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-book"></i></div>
+          <h3 class="feature-title">SDKs & Libraries</h3>
+          <p class="feature-text">
+            Official SDKs for Python, JavaScript, Unity, Unreal.<br>
+            Community libraries for more platforms.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-chart-bar"></i></div>
+          <h3 class="feature-title">Usage Analytics</h3>
+          <p class="feature-text">
+            Dashboard for API usage, performance metrics.<br>
+            Monitor costs and optimize integration.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-lock"></i></div>
+          <h3 class="feature-title">Enterprise Security</h3>
+          <p class="feature-text">
+            API keys, OAuth2, on-premise deployment.<br>
+            SOC 2 Type II certified, GDPR compliant.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-comments"></i></div>
+          <h3 class="feature-title">Developer Support</h3>
+          <p class="feature-text">
+            Discord community, email support, SLAs.<br>
+            Dedicated support for enterprise customers.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Workflow -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header text-center">
+        <h2>How It Works</h2>
+        <p class="section-subtitle">
+          From input to 3D scene in three simple steps
+        </p>
+      </div>
+
+      <div class="grid grid-3">
+        <div class="card">
+          <div class="card-number gradient-text">01</div>
+          <h3 class="card-title">Upload Media</h3>
+          <p class="card-text">
+            Send images, videos, or text prompts via REST API.
+            Supports all major formats: JPEG, PNG, MP4, MOV.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="card-number gradient-text">02</div>
+          <h3 class="card-title">AI Processing</h3>
+          <p class="card-text">
+            Our spatial AI models reconstruct or generate 3D scenes.
+            Powered by gaussian splatting and neural rendering.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="card-number gradient-text">03</div>
+          <h3 class="card-title">Get Results</h3>
+          <p class="card-text">
+            Download gaussian splats, meshes, or point clouds.
+            Export to Unity, Unreal, Blender, or custom formats.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section class="section section-dark" id="pricing">
+    <div class="container">
+      <div class="section-header text-center">
+        <h2>Simple, Transparent Pricing</h2>
+        <p class="section-subtitle">
+          Pay only for what you use. No hidden fees.
+        </p>
+      </div>
+
+      <div class="grid grid-3">
+        <div class="card">
+          <h3 class="card-title">Developer</h3>
+          <div class="price-tag">
+            <span class="price">$0</span>
+            <span class="price-period">/month</span>
+          </div>
+          <ul class="feature-list">
+            <li>100 free API calls/month</li>
+            <li>Community support</li>
+            <li>All API endpoints</li>
+            <li>Standard processing speed</li>
+            <li>Public documentation</li>
+          </ul>
+          <a href="developers.html" class="btn btn-secondary" style="width: 100%; margin-top: var(--spacing-md);">Get Started</a>
+        </div>
+
+        <div class="card card-highlight">
+          <h3 class="card-title">Professional</h3>
+          <div class="price-tag">
+            <span class="price gradient-text">Pay-per-use</span>
+          </div>
+          <ul class="feature-list">
+            <li>$0.10 per 3D reconstruction</li>
+            <li>$0.50 per generative scene</li>
+            <li>Volume discounts available</li>
+            <li>Email support (24hr response)</li>
+            <li>Priority processing</li>
+            <li>Usage analytics dashboard</li>
+          </ul>
+          <a href="developers.html" class="btn btn-primary" style="width: 100%; margin-top: var(--spacing-md);">Start Building</a>
+        </div>
+
+        <div class="card">
+          <h3 class="card-title">Enterprise</h3>
+          <div class="price-tag">
+            <span class="price">Custom</span>
+          </div>
+          <ul class="feature-list">
+            <li>Custom pricing & contracts</li>
+            <li>On-premise deployment</li>
+            <li>White-label options</li>
+            <li>Dedicated support & SLAs</li>
+            <li>Custom model training</li>
+            <li>Volume commitments</li>
+          </ul>
+          <a href="company.html#contact" class="btn btn-secondary" style="width: 100%; margin-top: var(--spacing-md);">Contact Sales</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tech Stack -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header text-center">
+        <h2>Powered by State-of-the-Art Research</h2>
+      </div>
+
+      <div class="grid grid-2">
+        <div class="card">
+          <h3 class="card-title">Gaussian Splatting</h3>
+          <p class="card-text">
+            Real-time 3D reconstruction using 3D gaussian primitives.
+            Enables photorealistic rendering at 60+ FPS.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3 class="card-title">VGGT Architecture</h3>
+          <p class="card-text">
+            Visual Geometry Grounded Transformer for multimodal spatial understanding.
+            Proprietary model trained on 50M+ spatial samples.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3 class="card-title">Neural Rendering</h3>
+          <p class="card-text">
+            NeRF-based techniques for view synthesis and scene completion.
+            Generate photorealistic novel views from sparse inputs.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3 class="card-title">Diffusion Models</h3>
+          <p class="card-text">
+            3D-native diffusion for generative scene creation.
+            Text-to-3D, image-to-3D, video-to-3D pipelines.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section section-dark" style="background: linear-gradient(135deg, rgba(77, 0, 153, 0.3), rgba(255, 179, 0, 0.3));">
+    <div class="container text-center">
+      <h2>Ready to Build with Spatial AI?</h2>
+      <p class="section-subtitle" style="max-width: 600px; margin: 0 auto var(--spacing-md);">
+        Join the waitlist for API alpha access launching Q1 2026
+      </p>
+      <div class="hero-buttons">
+        <a href="developers.html" class="btn btn-primary">Get API Access</a>
+        <a href="company.html#contact" class="btn btn-secondary">Talk to Sales</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-section">
+          <h4 class="footer-title">Exabyte Spatial AI</h4>
+          <p class="footer-text">
+            The foundational platform for spatial intelligence.
+            Building the future of 3D AI.
+          </p>
+        </div>
+
+        <div class="footer-section">
+          <h4 class="footer-title">Products</h4>
+          <ul class="footer-links">
+            <li><a href="platform.html">Spatial AI API</a></li>
+            <li><a href="https://exabyte.studio" target="_blank">Exabyte Studio</a></li>
+            <li><a href="products.html">All Products</a></li>
+            <li><a href="developers.html">Documentation</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4 class="footer-title">Company</h4>
+          <ul class="footer-links">
+            <li><a href="company.html">About Us</a></li>
+            <li><a href="company.html#team">Team</a></li>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="company.html#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4 class="footer-title">Resources</h4>
+          <ul class="footer-links">
+            <li><a href="developers.html">API Docs</a></li>
+            <li><a href="developers.html#guides">Guides</a></li>
+            <li><a href="developers.html#examples">Examples</a></li>
+            <li><a href="company.html#news">News</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Exabyte Spatial AI. All rights reserved.</p>
+        <div class="footer-links-inline">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Spatial AI API Documentation - SDKs, guides, examples, and API reference for developers building with spatial intelligence.">
+  <title>Developers - Exabyte Spatial AI</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <div class="nav-content">
+        <a href="index.html" class="logo">
+          <img src="images/logo.png" alt="Exabyte Spatial AI Logo" class="logo-img">
+          <span class="logo-text">Exabyte Spatial AI</span>
+        </a>
+
+        <div class="nav-toggle" id="navToggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="platform.html" class="nav-link">Platform</a></li>
+          <li><a href="products.html" class="nav-link">Products</a></li>
+          <li><a href="developers.html" class="nav-link">Developers</a></li>
+          <li><a href="company.html" class="nav-link">Company</a></li>
+          <li><a href="careers.html" class="nav-link">Careers</a></li>
+          <li><a href="https://exabyte.studio" class="nav-link nav-link-highlight" target="_blank">Exabyte Studio</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" style="padding: 80px 0 60px 0; background: linear-gradient(135deg, rgba(77, 0, 153, 0.1), rgba(255, 179, 0, 0.05)); position: relative;">
+    <div class="hero-content" style="position: relative; bottom: auto; transform: none; left: auto; margin: 0 auto;">
+      <h1 class="hero-title">
+        <span class="gradient-text">Developer Portal</span>
+      </h1>
+      <p class="hero-subtitle">
+        Everything you need to build with spatial intelligence.<br>
+        APIs, SDKs, guides, and examples to get you started.
+      </p>
+      <div class="hero-buttons">
+        <a href="#quickstart" class="btn btn-primary">Get Started</a>
+        <a href="#docs" class="btn btn-secondary">API Reference</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Start -->
+  <section class="section" id="quickstart">
+    <div class="container">
+      <div class="section-header text-center">
+        <h2>Quick Start</h2>
+        <p class="section-subtitle">Get up and running in minutes</p>
+      </div>
+
+      <div class="grid grid-3">
+        <div class="card">
+          <div class="card-number gradient-text">01</div>
+          <h3 class="card-title">Get API Key</h3>
+          <p class="card-text">
+            Sign up for a free developer account and get your API key.
+            100 free API calls per month included.
+          </p>
+          <div class="code-container" style="display: none;">
+            <pre><code># Sign up at:
+https://api.exabytesai.com/signup</code></pre>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-number gradient-text">02</div>
+          <h3 class="card-title">Install SDK</h3>
+          <p class="card-text">
+            Install the SDK for your preferred language.
+            Python, JavaScript, Unity, Unreal available.
+          </p>
+          <div class="code-container" style="display: none;">
+            <button class="copy-button">Copy</button>
+            <pre><code># Python
+pip install exabyte-spatial-ai
+
+# JavaScript
+npm install @exabyte/spatial-ai</code></pre>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-number gradient-text">03</div>
+          <h3 class="card-title">Make First Call</h3>
+          <p class="card-text">
+            Reconstruct your first 3D scene from an image.
+            Get results in seconds.
+          </p>
+          <div class="code-container" style="display: none;">
+            <button class="copy-button">Copy</button>
+            <pre><code>from exabyte import SpatialAI
+
+client = SpatialAI(api_key="YOUR_KEY")
+result = client.reconstruct("image.jpg")
+print(result.splat_url)</code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SDKs -->
+  <section class="section section-dark">
+    <div class="container">
+      <div class="section-header text-center">
+        <h2>Official SDKs</h2>
+      </div>
+
+      <div class="grid grid-2">
+        <div class="card">
+          <h3 class="card-title">🐍 Python SDK</h3>
+          <p class="card-text">
+            Full-featured Python client with async support.
+            Perfect for ML pipelines and backend services.
+          </p>
+          <div class="code-container" style="display: none;">
+            <button class="copy-button">Copy</button>
+            <pre><code>pip install exabyte-spatial-ai
+
+from exabyte import SpatialAI
+
+client = SpatialAI(api_key="YOUR_KEY")
+scene = await client.reconstruct_async(
+    media_url="video.mp4",
+    quality="high"
+)</code></pre>
+          </div>
+          <a href="#" class="card-link">View Python Docs →</a>
+        </div>
+
+        <div class="card">
+          <h3 class="card-title"><i class="fas fa-bolt"></i> JavaScript SDK</h3>
+          <p class="card-text">
+            Modern JavaScript/TypeScript client for web apps.
+            Works in Node.js and browsers.
+          </p>
+          <div class="code-container" style="display: none;">
+            <button class="copy-button">Copy</button>
+            <pre><code>npm install @exabyte/spatial-ai
+
+import { SpatialAI } from '@exabyte/spatial-ai';
+
+const client = new SpatialAI('YOUR_KEY');
+const scene = await client.reconstruct({
+  mediaUrl: 'image.jpg',
+  quality: 'high'
+});</code></pre>
+          </div>
+          <a href="#" class="card-link">View JavaScript Docs →</a>
+        </div>
+
+        <div class="card">
+          <h3 class="card-title">🎮 Unity SDK</h3>
+          <p class="card-text">
+            Native Unity integration for game developers.
+            Import 3D scenes directly into Unity projects.
+          </p>
+          <div class="code-container" style="display: none;">
+            <pre><code>// Unity Package Manager
+https://github.com/exabytesai/unity-sdk
+
+using ExabyteSpatialAI;
+
+var client = new SpatialAIClient(apiKey);
+var scene = await client.ReconstructAsync(
+    imageUrl, SceneQuality.High
+);</code></pre>
+          </div>
+          <a href="#" class="card-link">View Unity Docs →</a>
+        </div>
+
+        <div class="card">
+          <h3 class="card-title">🔥 Unreal SDK</h3>
+          <p class="card-text">
+            Unreal Engine plugin for spatial AI integration.
+            Blueprint and C++ support.
+          </p>
+          <div class="code-container" style="display: none;">
+            <pre><code>// Unreal Marketplace
+https://unrealengine.com/marketplace/exabyte
+
+#include "ExabyteSpatialAI.h"
+
+USpatialAIClient* Client =
+    UExabyteSpatialAI::CreateClient(ApiKey);
+Client->Reconstruct(ImagePath);</code></pre>
+          </div>
+          <a href="#" class="card-link">View Unreal Docs →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- API Reference -->
+  <section class="section" id="docs">
+    <div class="container">
+      <div class="section-header text-center">
+        <h2>API Reference</h2>
+        <p class="section-subtitle">Complete REST API documentation</p>
+      </div>
+
+      <div class="grid grid-2">
+        <div class="card">
+          <h3 class="card-title">🔄 Reconstruction API</h3>
+          <p class="card-text">
+            Convert images and videos to 3D scenes using gaussian splatting and neural rendering.
+          </p>
+          <div class="code-container" style="display: none;">
+            <button class="copy-button">Copy</button>
+            <pre><code>POST https://api.exabytesai.com/v1/reconstruct
+
+{
+  "media_url": "https://example.com/image.jpg",
+  "quality": "high",
+  "format": "gaussian_splat",
+  "options": {
+    "point_cloud": true
+  }
+}</code></pre>
+          </div>
+          <ul class="feature-list">
+            <li>Image reconstruction (single/multi-view)</li>
+            <li>Video reconstruction (temporal consistency)</li>
+            <li>Output formats: splat, mesh, point cloud</li>
+            <li>Processing time: 10s - 5min depending on input</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3 class="card-title">🎨 Generation API</h3>
+          <p class="card-text">
+            Generate navigable 3D environments from text prompts or images.
+          </p>
+          <div class="code-container" style="display: none;">
+            <button class="copy-button">Copy</button>
+            <pre><code>POST https://api.exabytesai.com/v1/generate
+
+{
+  "prompt": "modern office interior",
+  "style": "photorealistic",
+  "size": "medium",
+  "format": "gaussian_splat"
+}</code></pre>
+          </div>
+          <ul class="feature-list">
+            <li>Text-to-3D generation</li>
+            <li>Image-to-3D enhancement</li>
+            <li>Style control (photorealistic, artistic)</li>
+            <li>Scene size options (small, medium, large)</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3 class="card-title"><i class="fas fa-edit"></i> Editing API</h3>
+          <p class="card-text">
+            Modify 3D scenes with AI-powered editing operations.
+          </p>
+          <div class="code-container" style="display: none;">
+            <button class="copy-button">Copy</button>
+            <pre><code>POST https://api.exabytesai.com/v1/edit
+
+{
+  "scene_id": "scene_abc123",
+  "operation": "add_object",
+  "params": {
+    "object": "chair",
+    "position": [0, 0, 0]
+  }
+}</code></pre>
+          </div>
+          <ul class="feature-list">
+            <li>Add/remove objects</li>
+            <li>Change lighting and materials</li>
+            <li>Inpaint and outpaint scenes</li>
+            <li>Style transfer</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3 class="card-title">📊 Management API</h3>
+          <p class="card-text">
+            Manage scenes, check status, download results.
+          </p>
+          <div class="code-container" style="display: none;">
+            <button class="copy-button">Copy</button>
+            <pre><code>GET https://api.exabytesai.com/v1/scenes/:id
+
+{
+  "id": "scene_abc123",
+  "status": "completed",
+  "created_at": "2026-01-01T00:00:00Z",
+  "download_url": "https://..."
+}</code></pre>
+          </div>
+          <ul class="feature-list">
+            <li>List scenes</li>
+            <li>Get scene status</li>
+            <li>Download results</li>
+            <li>Delete scenes</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Examples -->
+  <section class="section section-dark" id="examples">
+    <div class="container">
+      <div class="section-header text-center">
+        <h2>Code Examples</h2>
+        <p class="section-subtitle">Real-world use cases and sample code</p>
+      </div>
+
+      <div class="grid grid-3">
+        <div class="card">
+          <h3 class="card-title">Virtual Tour Generator</h3>
+          <p class="card-text">
+            Convert property photos into interactive 3D virtual tours.
+          </p>
+          <a href="#" class="card-link">View Example →</a>
+        </div>
+
+        <div class="card">
+          <h3 class="card-title">Procedural Game Worlds</h3>
+          <p class="card-text">
+            Generate unique 3D game environments from text descriptions.
+          </p>
+          <a href="#" class="card-link">View Example →</a>
+        </div>
+
+        <div class="card">
+          <h3 class="card-title">AR Object Placement</h3>
+          <p class="card-text">
+            Reconstruct real spaces for accurate AR object placement.
+          </p>
+          <a href="#" class="card-link">View Example →</a>
+        </div>
+
+        <div class="card">
+          <h3 class="card-title">3D Product Viewer</h3>
+          <p class="card-text">
+            Create 3D product models from photos for e-commerce.
+          </p>
+          <a href="#" class="card-link">View Example →</a>
+        </div>
+
+        <div class="card">
+          <h3 class="card-title">Spatial Video Editor</h3>
+          <p class="card-text">
+            Build 360° video editing tools with spatial awareness.
+          </p>
+          <a href="#" class="card-link">View Example →</a>
+        </div>
+
+        <div class="card">
+          <h3 class="card-title">Digital Twin Creator</h3>
+          <p class="card-text">
+            Generate digital twins of physical spaces for simulation.
+          </p>
+          <a href="#" class="card-link">View Example →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Guides -->
+  <section class="section" id="guides">
+    <div class="container">
+      <div class="section-header text-center">
+        <h2>Guides & Tutorials</h2>
+      </div>
+
+      <div class="grid grid-2">
+        <div class="card">
+          <h3 class="card-title">📖 Getting Started Guide</h3>
+          <p class="card-text">
+            Complete walkthrough from signup to first 3D reconstruction.
+            Covers authentication, SDKs, and basic API calls.
+          </p>
+          <a href="#" class="card-link">Read Guide →</a>
+        </div>
+
+        <div class="card">
+          <h3 class="card-title"><i class="fas fa-lightbulb"></i> Best Practices</h3>
+          <p class="card-text">
+            Learn optimization techniques, error handling, and production deployment strategies.
+          </p>
+          <a href="#" class="card-link">Read Guide →</a>
+        </div>
+
+        <div class="card">
+          <h3 class="card-title">🎮 Unity Integration</h3>
+          <p class="card-text">
+            Step-by-step tutorial for integrating Spatial AI into Unity projects.
+            Import and render gaussian splats in real-time.
+          </p>
+          <a href="#" class="card-link">Read Guide →</a>
+        </div>
+
+        <div class="card">
+          <h3 class="card-title">🎥 Video Reconstruction</h3>
+          <p class="card-text">
+            Advanced guide for reconstructing 3D scenes from video footage.
+            Covers camera calibration and temporal consistency.
+          </p>
+          <a href="#" class="card-link">Read Guide →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Support -->
+  <section class="section section-dark">
+    <div class="container">
+      <div class="section-header text-center">
+        <h2>Developer Support</h2>
+      </div>
+
+      <div class="grid grid-3">
+        <div class="card">
+          <div class="card-icon gradient-text">💬</div>
+          <h3 class="card-title">Community Discord</h3>
+          <p class="card-text">
+            Join our Discord server for community support, discussions, and announcements.
+          </p>
+          <a href="#" class="btn btn-secondary" style="width: 100%; margin-top: var(--spacing-sm);">Join Discord</a>
+        </div>
+
+        <div class="card">
+          <div class="card-icon gradient-text">📧</div>
+          <h3 class="card-title">Email Support</h3>
+          <p class="card-text">
+            Email our developer support team for technical questions and API issues.
+          </p>
+          <!-- COMMENTED OUT: Email system not set up yet
+          <a href="mailto:developers@exabytesai.com" class="btn btn-secondary" style="width: 100%; margin-top: var(--spacing-sm);">Email Support</a>
+          -->
+        </div>
+
+        <div class="card">
+          <div class="card-icon gradient-text"><i class="fas fa-book"></i></div>
+          <h3 class="card-title">Documentation</h3>
+          <p class="card-text">
+            Comprehensive API reference, guides, and troubleshooting resources.
+          </p>
+          <a href="#" class="btn btn-secondary" style="width: 100%; margin-top: var(--spacing-sm);">Browse Docs</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section" style="background: linear-gradient(135deg, rgba(77, 0, 153, 0.3), rgba(255, 179, 0, 0.3));">
+    <div class="container text-center">
+      <h2>Ready to Start Building?</h2>
+      <p class="section-subtitle" style="max-width: 600px; margin: 0 auto var(--spacing-md);">
+        Sign up for a free developer account and get 100 free API calls per month
+      </p>
+      <div class="hero-buttons">
+        <a href="#" class="btn btn-primary">Get API Key</a>
+        <a href="platform.html" class="btn btn-secondary">View Pricing</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-section">
+          <h4 class="footer-title">Exabyte Spatial AI</h4>
+          <p class="footer-text">
+            The foundational platform for spatial intelligence.
+            Building the future of 3D AI.
+          </p>
+        </div>
+
+        <div class="footer-section">
+          <h4 class="footer-title">Products</h4>
+          <ul class="footer-links">
+            <li><a href="platform.html">Spatial AI API</a></li>
+            <li><a href="https://exabyte.studio" target="_blank">Exabyte Studio</a></li>
+            <li><a href="products.html">All Products</a></li>
+            <li><a href="developers.html">Documentation</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4 class="footer-title">Company</h4>
+          <ul class="footer-links">
+            <li><a href="company.html">About Us</a></li>
+            <li><a href="company.html#team">Team</a></li>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="company.html#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4 class="footer-title">Resources</h4>
+          <ul class="footer-links">
+            <li><a href="developers.html">API Docs</a></li>
+            <li><a href="developers.html#guides">Guides</a></li>
+            <li><a href="developers.html#examples">Examples</a></li>
+            <li><a href="company.html#news">News</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Exabyte Spatial AI. All rights reserved.</p>
+        <div class="footer-links-inline">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>

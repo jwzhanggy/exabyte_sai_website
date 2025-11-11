@@ -1,0 +1,77 @@
+════════════════════════════════════════════════════════════════
+  DNS SETTINGS FOR SQUARESPACE → GITHUB PAGES
+  Domain: exabytesai.com
+════════════════════════════════════════════════════════════════
+
+⚠️  IMPORTANT: Apply these settings at Squarespace DNS Settings
+
+────────────────────────────────────────────────────────────────
+  A RECORDS (for exabytesai.com)
+────────────────────────────────────────────────────────────────
+
+Record 1:
+  Type: A
+  Host: @
+  Value: 185.199.108.153
+  TTL: 3600
+
+Record 2:
+  Type: A
+  Host: @
+  Value: 185.199.109.153
+  TTL: 3600
+
+Record 3:
+  Type: A
+  Host: @
+  Value: 185.199.110.153
+  TTL: 3600
+
+Record 4:
+  Type: A
+  Host: @
+  Value: 185.199.111.153
+  TTL: 3600
+
+────────────────────────────────────────────────────────────────
+  CNAME RECORD (for www.exabytesai.com)
+────────────────────────────────────────────────────────────────
+
+Record:
+  Type: CNAME
+  Host: www
+  Value: YOUR_GITHUB_USERNAME.github.io
+  TTL: 3600
+
+⚠️  Replace YOUR_GITHUB_USERNAME with your actual GitHub username!
+
+────────────────────────────────────────────────────────────────
+  WHAT TO DELETE
+────────────────────────────────────────────────────────────────
+
+❌ Remove any existing A records pointing to Squarespace IPs
+❌ Remove any CNAME for @ (apex domain)
+✅ Keep MX records (for email)
+✅ Keep TXT records (for verification)
+
+────────────────────────────────────────────────────────────────
+  VERIFICATION
+────────────────────────────────────────────────────────────────
+
+After 1-2 hours, verify DNS propagation:
+  • https://dnschecker.org
+  • https://www.whatsmydns.net
+
+Look for IP addresses: 185.199.108.153 - 185.199.111.153
+
+────────────────────────────────────────────────────────────────
+  GITHUB PAGES CUSTOM DOMAIN SETTING
+────────────────────────────────────────────────────────────────
+
+In GitHub repo → Settings → Pages → Custom domain:
+  Enter: exabytesai.com
+  (No www, no https://, just the domain)
+
+Then check: ✅ Enforce HTTPS
+
+════════════════════════════════════════════════════════════════
